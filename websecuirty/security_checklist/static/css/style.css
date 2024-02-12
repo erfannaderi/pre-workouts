@@ -1,0 +1,12 @@
+h1
+{
+    color : purple;
+}
+body
+{
+    background-color : #f0f0f0;
+}
+.form-layout{
+    border-radius: 20px;
+    width: 500px;
+}

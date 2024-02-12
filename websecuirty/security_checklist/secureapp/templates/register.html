@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body>
+
+    <br>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1>Create an Account</h1>
+        <h3> Secure Your Account Today</h3>
+        <br><br>
+        <form action="{% url 'register' %}" method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ form.username.label_tag }} {{ form.username }}
+            <br><br>
+
+            {{ form.email.label_tag }} {{ form.email }}
+            <br><br>
+
+            {{ form.password1.label_tag }} {{ form.password1 }}
+            <br><br>
+
+            {{ form.password2.label_tag }} {{ form.password2 }}
+            <br><br>
+            <button type="Submit" class="float-end btn btn-success btn-log  btn-block p-3">
+                Register
+            </button>
+        </form>
+        <br> <br>
+        <div class="text-center">
+            <p> already have an account?</p>
+            <a class="btn btn-sm btn-info">Login</a>
+        </div>
+    </div>
+    </body>
+{#    <script src='https://www.google.com/recaptcha/api.js'></script>#}
+{% endblock %}
